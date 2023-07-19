@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZerohungerModelStoreContainer" CdmEntityContainer="ZerohungerEntities">
+    <EntitySetMapping Name="Collect_requests">
+      <EntityTypeMapping TypeName="ZerohungerModel.Collect_requests">
+        <MappingFragment StoreEntitySet="Collect_requests">
+          <ScalarProperty Name="Request_id" ColumnName="Request_id" />
+          <ScalarProperty Name="Restaurant_id" ColumnName="Restaurant_id" />
+          <ScalarProperty Name="Maximum_preservation_time" ColumnName="Maximum_preservation_time" />
+          <ScalarProperty Name="Collection_date" ColumnName="Collection_date" />
+          <ScalarProperty Name="Collection_status" ColumnName="Collection_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Collection_Logs">
+      <EntityTypeMapping TypeName="ZerohungerModel.Collection_Logs">
+        <MappingFragment StoreEntitySet="Collection_Logs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Collection_date" ColumnName="Collection_date" />
+          <ScalarProperty Name="Distribution_date" ColumnName="Distribution_date" />
+          <ScalarProperty Name="Distribution_status" ColumnName="Distribution_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="ZerohungerModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Employee_id" ColumnName="Employee_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Food_items">
+      <EntityTypeMapping TypeName="ZerohungerModel.Food_items">
+        <MappingFragment StoreEntitySet="Food_items">
+          <ScalarProperty Name="Food_item_id" ColumnName="Food_item_id" />
+          <ScalarProperty Name="Request_Id" ColumnName="Request_Id" />
+          <ScalarProperty Name="Item_name" ColumnName="Item_name" />
+          <ScalarProperty Name="Quantiry" ColumnName="Quantiry" />
+          <ScalarProperty Name="Expiry_date" ColumnName="Expiry_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurant">
+      <EntityTypeMapping TypeName="ZerohungerModel.Restaurant">
+        <MappingFragment StoreEntitySet="Restaurant">
+          <ScalarProperty Name="Restaurant_id" ColumnName="Restaurant_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type">
+      <EntityTypeMapping TypeName="ZerohungerModel.Type">
+        <MappingFragment StoreEntitySet="Type">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ZerohungerModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

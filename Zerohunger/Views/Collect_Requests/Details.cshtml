@@ -1,0 +1,58 @@
+﻿@model Zerohunger.EF.Collect_requests
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Collect_requests</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Request_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Request_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Restaurant_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Restaurant_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maximum_preservation_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maximum_preservation_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Collection_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Collection_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Collection_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Collection_status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

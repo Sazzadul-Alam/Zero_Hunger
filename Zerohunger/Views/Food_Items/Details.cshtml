@@ -1,0 +1,58 @@
+﻿@model Zerohunger.EF.Food_items
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Food_items</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Food_item_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Food_item_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Request_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Request_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantiry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantiry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expiry_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expiry_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

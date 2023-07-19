@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Zerohunger.EF.Collect_requests>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center text-primary">Restaurant</h2>
+
+<ul class="nav nav-tabs bg-success justify-content-center">
+
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/Food_Items/Index">Food Item</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/Collect_Requests/Index">Collection Request </a>
+    </li>
+
+    <li>
+        <a href="~/Home/AddUser">Log Out</a>
+    </li>
+</ul>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Request_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restaurant_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maximum_preservation_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Collection_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Collection_status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Request_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Restaurant_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maximum_preservation_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Collection_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Collection_status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Request_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Request_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Request_id })
+            </td>
+        </tr>
+    }
+
+</table>

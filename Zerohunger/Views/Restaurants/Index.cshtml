@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Zerohunger.EF.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2 class="text-center text-primary">Employee</h2>
+
+<ul class="nav nav-tabs bg-success justify-content-center">
+
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/Restaurants/Index">Restaurant List</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/Collect_Requests/Home">Collection Request</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/Collection_Logs/Index">Collection Logs</a>
+    </li>
+
+    <li>
+        <a href="~/Home/AddUser">Log Out</a>
+    </li>
+</ul>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Restaurant_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Restaurant_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
